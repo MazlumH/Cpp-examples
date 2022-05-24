@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------*/
+/* */
+/* Programmname:  */
+/* */
+/* Autor:  */
+/* */
+/* Datum: */
+/* */
+/* Beschreibung: */
+/* */
+/*--------------------------------------------------------------*/
+
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <fstream>
+
+using namespace std;
+
+struct Adresse
+{
+	string name;
+	string addy;
+	string tel;
+	string geb;
+};
+int main() 
+{
+cout << "------------------------------------------------------" << endl;
+cout << "Programmname : " << endl;
+cout << "Programmierer: Mazlum Havutcu, Zuerich " << endl;
+cout << "Beschreibung : " << endl;
+cout << "------------------------------------------------------" << endl;
+cout << endl << endl;
+
+ofstream DatenDatei;
+DatenDatei.open ("C:\\Desktop\\Adressen.txt",ios::app);
+
+Adresse Kunde;
+cout<<"Guten Tag, das ist Ihr persoenliches kleine Adressbuch."<<endl<<endl<<endl;
+
+if (DatenDatei)
+{
+	cout<<"Name: "<<endl;
+	getline(cin, Kunde.name);
+	cout<<"Adresse: "<<endl;
+	getline(cin, Kunde.addy);
+	cout<<"Telefonnummer: "<<endl;
+	getline(cin, Kunde.tel);
+	cout<<"Geburtstag: "<<endl;
+	getline(cin, Kunde.geb);
+	
+	DatenDatei<<"Name: "<<Kunde.name<<endl;
+	DatenDatei<<"Adresse: "<<Kunde.addy<<endl;
+	DatenDatei<<"Telefonnummer: "<<Kunde.tel<<endl;
+	DatenDatei<<"Geburtstag: "<<Kunde.geb<<endl;
+	DatenDatei.close();
+}
+else
+{
+	cout<<"Dateifehler!!!!"<<endl<<endl;
+}
+system ("PAUSE");
+return 0;
+}
