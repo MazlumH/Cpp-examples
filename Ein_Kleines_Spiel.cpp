@@ -53,7 +53,7 @@ int main()
  srand( time (NULL) );
  PcAuswahl = (rand()%3)+1;
  cout << "\tDu hast " << UserAuswahl << " gew\x84 \bhlt" << "\t\tDer PC hat " << PcAuswahl << " gew\x84 \bhlt!\n\n\t\t\t"; 
- /////////////////////// Jetzt fängt die Vergleicherei an ^^ omg!!!!
+ /////////////////////// Jetzt fÃ¤ngt die Vergleicherei an ^^ omg!!!!
  
  	if (UserAuswahl == 1 && PcAuswahl == 1)
  	{
